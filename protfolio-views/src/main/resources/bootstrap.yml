@@ -1,0 +1,7 @@
+spring:
+  cloud:
+    config:
+      uri: http://localhost:8888
+      name: protfolio-client-eureka, protfolio-client-zipkin, protfolio-client-admin, protfolio-views
+      label: master
+      profile: dev

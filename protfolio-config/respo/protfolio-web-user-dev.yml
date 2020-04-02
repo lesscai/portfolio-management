@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: protfolio-web-user
+
+feign:
+  hystrix:
+    enabled: true
+
+server:
+  port: 9101

@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: protfolio-web-bondsbill
+
+server:
+  port: 9301

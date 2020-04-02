@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: protfolio-web-administrators
+
+server:
+  port: 9201

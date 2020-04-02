@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: protfolio-web-bonds
+
+server:
+  port: 9401
