@@ -7,20 +7,24 @@
         <groupId>com.xmz.protfolio</groupId>
         <artifactId>protfolio-dependencies</artifactId>
         <version>1.0.0-SNAPSHOT</version>
-        <relativePath>../protfolio-dependencies/pom.xml</relativePath>
+        <relativePath>../../protfolio-dependencies/pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>protfolio-commons</artifactId>
-    <packaging>pom</packaging>
+    <artifactId>protfolio-commons-exception</artifactId>
+    <packaging>jar</packaging>
 
-    <name>protfolio-commons</name>
+    <name>protfolio-commons-exception</name>
     <inceptionYear>2020-Now</inceptionYear>
 
-    <modules>
-        <module>protfolio-commons-utils</module>
-        <module>protfolio-commons-domain</module>
-        <module>protfolio-commons-service</module>
-        <module>protfolio-commons-exception</module>
-    </modules>
+    <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-simple</artifactId>
+        </dependency>
+    </dependencies>
 </project>
