@@ -1,8 +1,12 @@
 package com.xmz.protolio.commons.domain;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class Job {
     private Long id;
 
@@ -15,4 +19,9 @@ public class Job {
      * 行业id，外键
      */
     private Long professionId;
+
+    /**
+     * 行业，外键
+     */
+    private Profession profession;
 }

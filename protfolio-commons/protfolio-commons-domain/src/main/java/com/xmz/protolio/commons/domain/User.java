@@ -1,10 +1,14 @@
 package com.xmz.protolio.commons.domain;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.Date;
 
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class User {
     /**
      * 主键
@@ -59,20 +63,41 @@ public class User {
     /**
      * 信息是否验证(1是2否)
      */
-    private Boolean isCheckIdentity;
+    private Integer isCheckIdentity;
 
     /**
      * 是否被冻结(1是2否)
      */
-    private Boolean isLock;
+    private Integer isLock;
 
     /**
      * 是否审核通过(1是2否0正在审核)
      */
-    private Boolean isChecked;
+    private Integer isChecked;
 
     /**
      * 营业部id
      */
     private Long departmentId;
+
+    /**
+     * 身份 ，外键
+     */
+    private Identity identity;
+
+    /**
+     * 风险，外键
+     */
+    private Risk risk;
+    /**
+     * 开户类型，外键
+     */
+    private Accounttype accounttype;
+
+    /**
+     * 营业部，外键
+     */
+    private Salesdepartment salesdepartment;
+
+
 }

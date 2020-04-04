@@ -1,10 +1,14 @@
 package com.xmz.protolio.commons.domain;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.Date;
 
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class Transrecord {
     private Long id;
 
@@ -31,7 +35,7 @@ public class Transrecord {
     /**
      * 状态（1成功，2失败）
      */
-    private Boolean transStatus;
+    private Integer transStatus;
 
     /**
      * 银行流水号

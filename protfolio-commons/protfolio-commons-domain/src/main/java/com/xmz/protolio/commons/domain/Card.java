@@ -1,8 +1,12 @@
 package com.xmz.protolio.commons.domain;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class Card {
     private Long id;
 
@@ -30,4 +34,14 @@ public class Card {
      * 余额
      */
     private Float balance;
+
+    /**
+     * 银行，外键
+     */
+    private Bank bank;
+
+    /**
+     * 用户外键
+     */
+    private User user;
 }

@@ -1,8 +1,12 @@
 package com.xmz.protolio.commons.domain;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class Investment {
     private Long id;
 
@@ -20,4 +24,6 @@ public class Investment {
      * 投资期限
      */
     private String term;
+
+    private Risk risk;
 }

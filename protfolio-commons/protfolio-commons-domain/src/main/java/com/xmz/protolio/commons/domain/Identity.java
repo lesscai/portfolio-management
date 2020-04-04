@@ -1,10 +1,14 @@
 package com.xmz.protolio.commons.domain;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.Date;
 
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class Identity {
     private Long id;
 
@@ -56,20 +60,25 @@ public class Identity {
     /**
      * 学历（值对应的学历待定）
      */
-    private Boolean qualifications;
+    private Integer qualifications;
 
     /**
      * 账户受益人和本人关系
      */
-    private Boolean relation;
+    private Integer relation;
 
     /**
      * 实际控制人，同上
      */
-    private Boolean controller;
+    private Integer controller;
 
     /**
      * 不良诚信记录(内容待定)
      */
     private Integer sincerity;
+
+    /**
+     * 职业外键
+     */
+    private Job job;
 }
