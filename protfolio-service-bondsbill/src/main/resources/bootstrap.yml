@@ -20,3 +20,9 @@ spring:
 
 server:
   port:  9031
+
+mybatis:
+  configuration:
+    cache-enabled: true
+  type-aliases-package: com.xmz.protfolio.service
+  mapper-locations: classpath:mapper/*.xml

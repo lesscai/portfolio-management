@@ -8,10 +8,6 @@
         a.point
     </sql>
 
-    <sql id="bondsJoins">
-        LEFT JOIN teacher AS b ON a.teacher_id = b.id
-    </sql>
-
     <select id="selectAll" resultType="com.xmz.protolio.commons.domain.Bonds">
         select
         <include refid="bondsColumns" />

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xmz.protfolio.service.bondsbill.mapper.BondsbillMapper">
+    <sql id="bondsbillColumns">
+        a.id,
+        a.amounts,
+        a.createdate,
+        a.billType,
+        b.id As "user.id",
+        c.id As "bonds.id"
+    </sql>
+
+    <sql id="bondsbillJoins">
+        LEFT JOIN user AS b ON a.userId = b.id
+        LEFT JOIN bonds AS c ON a.bondSId = c.id
+    </sql>
+
+    <select id="selectAll" resultType="com.xmz.protolio.commons.domain.Bondsbill">
+        select
+        <include refid="bondsbillColumns" />
+         from
+         bondsbill
+        <include refid="bondsbillJoins" />
+    </select>
+
+    <insert id="add" >
+        INSERT INTO bondsbill (
+        `bondsId`,
+        `billType`,
+        `amounts`,
+        `userId`,
+        `createdate`
+        )
+        VALUES
+        (
+        #{bonds.id},
+        #{billType},
+        #{amounts},
+        #{user.id},
+        #{createdate}
+        ) ;
+    </insert>
+
+</mapper>

@@ -1,4 +1,4 @@
-package com.xmz.protfolio.service.bonds.test;
+package com.xmz.protfolio.service.bondbills.test;
 
 import com.xmz.protfolio.service.bonds.ServiceBondsApplication;
 import com.xmz.protfolio.service.bonds.mapper.BondsMapper;
