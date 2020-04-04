@@ -14,65 +14,65 @@ public class User {
     /**
      * 资金账号
      */
-    private String accountnumber;
+    private String accountNumber;
 
     /**
      * 用户手机号
      */
-    private String userphone;
+    private String userPhone;
 
     /**
      * 用户密码
      */
-    private String userpassword;
+    private String userPassword;
 
     /**
      * 交易密码
      */
-    private String tradepassword;
+    private String tradePassword;
 
     /**
      * 身份证号
      */
-    private Long identityid;
+    private Long identityId;
 
     /**
      * 风险评估
      */
-    private Long riskcount;
+    private Long riskCount;
 
     /**
      * 开户类型
      */
-    private Long accounttypeid;
+    private Long accountTypeId;
 
     /**
      * 创建日期
      */
-    private Date createdate;
+    private Date createDate;
 
     /**
      * 上次登录
      */
-    private Date lastlogin;
+    private Date lastLogin;
 
     /**
      * 信息是否验证(1是2否)
      */
-    private Boolean ischeckidentity;
+    private Boolean isCheckIdentity;
 
     /**
      * 是否被冻结(1是2否)
      */
-    private Boolean islock;
+    private Boolean isLock;
 
     /**
      * 是否审核通过(1是2否0正在审核)
      */
-    private Boolean ischecked;
+    private Boolean isChecked;
 
     /**
      * 营业部id
      */
-    private Long departmentid;
+    private Long departmentId;
 }

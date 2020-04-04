@@ -9,12 +9,12 @@ public class Investment {
     /**
      * 投资项目名
      */
-    private String invname;
+    private String invName;
 
     /**
      * 风险评估,外键
      */
-    private Long riskid;
+    private Long riskId;
 
     /**
      * 投资期限

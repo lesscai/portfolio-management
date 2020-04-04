@@ -11,17 +11,17 @@ public class Transrecord {
     /**
      * 来源资金账号
      */
-    private String accountnumber1;
+    private String accountNumber1;
 
     /**
      * 收款资金账号
      */
-    private String accountnumber2;
+    private String accountNumber2;
 
     /**
      * 转账时间
      */
-    private Date transdate;
+    private Date transDate;
 
     /**
      * 金额
@@ -31,12 +31,12 @@ public class Transrecord {
     /**
      * 状态（1成功，2失败）
      */
-    private Boolean transstatus;
+    private Boolean transStatus;
 
     /**
      * 银行流水号
      */
-    private String serialnumber;
+    private String serialNumber;
 
     /**
      * 备注

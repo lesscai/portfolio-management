@@ -9,10 +9,10 @@ public class Job {
     /**
      * 职业名称
      */
-    private String jobname;
+    private String jobName;
 
     /**
      * 行业id，外键
      */
-    private Long professionid;
+    private Long professionId;
 }

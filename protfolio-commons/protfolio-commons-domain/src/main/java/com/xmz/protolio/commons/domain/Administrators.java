@@ -9,15 +9,15 @@ public class Administrators {
     /**
      * 管理员编号
      */
-    private String admincode;
+    private String adminCode;
 
     /**
      * 管理员姓名
      */
-    private String adminname;
+    private String adminName;
 
     /**
      * 管理员密码
      */
-    private String adminpassword;
+    private String adminPassword;
 }

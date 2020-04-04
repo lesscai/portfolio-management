@@ -9,12 +9,12 @@ public class Bonds {
     /**
      * 证券代码
      */
-    private String bondscode;
+    private String bondsCode;
 
     /**
      * 证券名称
      */
-    private String bondsname;
+    private String bondsName;
 
     /**
      * 股票点数

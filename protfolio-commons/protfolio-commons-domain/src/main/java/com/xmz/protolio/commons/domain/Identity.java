@@ -11,37 +11,37 @@ public class Identity {
     /**
      * 身份证号
      */
-    private String idnumber;
+    private String idNumber;
 
     /**
      * 姓名
      */
-    private String idname;
+    private String idName;
 
     /**
      * 签发机关
      */
-    private String idoffice;
+    private String idOffice;
 
     /**
      * 证件地址
      */
-    private String idaddress;
+    private String idAddress;
 
     /**
      * 联系地址
      */
-    private String contactaddress;
+    private String contactAddress;
 
     /**
      * 起始期限
      */
-    private Date idstart;
+    private Date idStart;
 
     /**
      * 结束期限
      */
-    private Date idend;
+    private Date idEnd;
 
     /**
      * 邮政编码
@@ -51,7 +51,7 @@ public class Identity {
     /**
      * 所属职业的id
      */
-    private Long jobid;
+    private Long jobId;
 
     /**
      * 学历（值对应的学历待定）

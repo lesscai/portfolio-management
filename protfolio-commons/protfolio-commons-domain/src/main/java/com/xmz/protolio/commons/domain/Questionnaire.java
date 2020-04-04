@@ -9,7 +9,7 @@ public class Questionnaire {
     /**
      * 问题类型
      */
-    private String qtype;
+    private String qType;
 
     /**
      * 问题文本地址

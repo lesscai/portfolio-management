@@ -13,12 +13,12 @@ public class Bondsbill {
     /**
      * 证券id外键
      */
-    private Long bondsid;
+    private Long bondSId;
 
     /**
      * 证券订单类型（1买入，2卖出）
      */
-    private Boolean billtype;
+    private Boolean billType;
 
     /**
      * 金额
@@ -28,7 +28,7 @@ public class Bondsbill {
     /**
      * 订单用户id外键
      */
-    private Long userid;
+    private Long userId;
 
     /**
      * 订单创建时间

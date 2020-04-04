@@ -10,11 +10,11 @@ public class Salesdepartment {
     /**
      * 营业部名称
      */
-    private String departname;
+    private String departName;
 
     /**
      * 营业部电话
      */
-    private String departphone;
+    private String departPhone;
 
 }

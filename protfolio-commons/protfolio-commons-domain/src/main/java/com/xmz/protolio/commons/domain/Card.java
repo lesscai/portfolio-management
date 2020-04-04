@@ -9,22 +9,22 @@ public class Card {
     /**
      * 银行id，外键
      */
-    private Long bankid;
+    private Long bankId;
 
     /**
      * 用户id，外键
      */
-    private Long userid;
+    private Long userId;
 
     /**
      * 银行卡号
      */
-    private String cardnumber;
+    private String cardNumber;
 
     /**
      * 银行密码
      */
-    private String cardpassword;
+    private String cardPassword;
 
     /**
      * 余额

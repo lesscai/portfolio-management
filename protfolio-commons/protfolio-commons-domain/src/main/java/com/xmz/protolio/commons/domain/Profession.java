@@ -10,6 +10,6 @@ public class Profession {
     /**
      * 行业名称
      */
-    private String professionname;
+    private String professionName;
 
 }

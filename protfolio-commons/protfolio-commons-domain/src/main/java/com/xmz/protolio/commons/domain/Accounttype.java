@@ -9,5 +9,5 @@ public class Accounttype {
     /**
      * 类型名称
      */
-    private String accounttypename;
+    private String accountTypeName;
 }

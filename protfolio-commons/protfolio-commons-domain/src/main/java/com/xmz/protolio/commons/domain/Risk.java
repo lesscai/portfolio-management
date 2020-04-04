@@ -9,6 +9,6 @@ public class Risk {
     /**
      * 评分（等级）
      */
-    private Integer riskscore;
+    private Integer riskScore;
 
 }

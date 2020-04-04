@@ -9,7 +9,7 @@ public class Bank {
     /**
      * 银行名称
      */
-    private String bankname;
+    private String bankName;
 
 
 }
