@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:include="include/header::html('学生信息详情界面')" ></head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>
+    $(function () {
+        var sid = getUrlParms("sid");
+        //ViewModel
+        var vue = new Vue({
+            el: '#workingArea',
+            data: {
+                uri: 'admin_info',
+                bean: {id: 0, name: '', intoGradeDate: '', address: '', phone: '',  grade:{name: ''}},
+                value: ''
+            },
+            mounted: function () {
+                this.init();
+            },
+            methods: {
+                init: function () {
+                    var url = this.uri + "/" + sid;
+                    axios.get(url).then(function (response) {
+                        vue.bean = response.data.bean;
+                        vue.value = response.data.value;
+                    });
+                },
+                isName: function () {
+                    var url = "admin_getByUser";
+
+                    axios.post(url, this.bean).then(function (response) {
+                        var result = response.data;
+                        vue.stata = result.stata;
+                        if (result.length != 0) {
+                            $("span.errorMessage").html(result.message);
+                            $("div.loginErrorMessageDiv").css("visibility", "visible");
+                        }
+                    });
+                },
+                update: function () {
+                    var url = "admin_student_update";
+                    axios.post(url, vue.bean).then(function (response) {
+                        var result = response.data;
+                        if (result.stata == 200) {
+                            alert(result.message);
+                            vue.init();
+                        } else {
+                            $("span.errorMessage").html("修改失败");
+                            $("div.loginErrorMessageDiv").css("visibility", "visible");
+                        }
+
+                    });
+                }
+
+
+            }
+        });
+    })
+</script>
+
+<div id="workingArea">
+
+    <div class="panel panel-warning editDiv">
+        <div class="loginErrorMessageDiv">
+            <div class="alert alert-danger" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close"></button>
+                <span class="errorMessage"></span>
+            </div>
+        </div>
+        <div class="panel-heading">学生信息详情</div>
+        <div class="panel-body">
+            <table class="editTable">
+                <tr>
+                    <td>学号</td>
+                    <td><input  v-model.trim="bean.id" type="text" disabled="disabled" class="form-control"></td>
+                </tr>
+                <tr>
+                    <td>姓名</td>
+                    <td><input v-on:blur="isName();"  v-model.trim="bean.name" type="text" class="form-control"></td>
+                </tr>
+                <tr>
+                    <td>入班日期</td>
+                    <td><input  v-model.trim="bean.intoGradeDate" type="text" disabled="disabled" class="form-control"></td>
+                </tr>
+                <tr>
+                    <td>班级</td>
+                    <td><input  v-model.trim="bean.grade.name" type="text" disabled="disabled" class="form-control"></td>
+                </tr>
+                <tr>
+                    <td>地址</td>
+                    <td><input  v-model.trim="bean.address" type="text" class="form-control"></td>
+                </tr>
+                <tr>
+                    <td>电话</td>
+                    <td><input  v-model.trim="bean.phone" type="text" class="form-control"></td>
+                </tr>
+                <tr>
+                    <td>学分</td>
+                    <td><input  v-model.trim="value" type="text" disabled="disabled" class="form-control"></td>
+                </tr>
+                <tr class="submitTR">
+                    <td colspan="2" align="center">
+                        <button type="submit" @click="update" class="btn btn-success">修 改</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+</html>
