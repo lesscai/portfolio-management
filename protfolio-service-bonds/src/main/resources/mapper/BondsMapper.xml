@@ -12,20 +12,7 @@
         LEFT JOIN teacher AS b ON a.teacher_id = b.id
     </sql>
 
-    <select id="selectAll" resultType="com.xmz.protolio.commons.domain.Bonds">
-        SELECT
-        <include refid="gradeColumns" />
-        FROM
-        grade as a
-        <include refid="gradeJoins" />
-    </select>
 
-    <select id="getByName" resultType="com.caijianan.student.commons.doamin.Grade">
-        SELECT
-        <include refid="gradeColumns" />
-        FROM
-        grade as a
-        <include refid="gradeJoins" />
-        where a.name = #{name}
-    </select>
+
+
 </mapper>
