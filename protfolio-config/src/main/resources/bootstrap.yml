@@ -12,7 +12,7 @@ spring:
       label: master
       server:
         git:
-          uri: git@gitee.com:cai_jia_nan/portfolio_management/protfolio-config/
+          uri: https://github.com/lesscai/protfolio-config.git
           search-paths: respo
 
 

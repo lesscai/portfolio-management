@@ -29,11 +29,12 @@
         <zipkin.version>2.10.1</zipkin.version>
 
         <!-- Commons Begin -->
-        <lombok.version>1.18.8</lombok.version>
+        <lombok.version>1.18.6</lombok.version>
         <jackson-annotations.version>2.9.8</jackson-annotations.version>
         <okhttp.version>4.2.2</okhttp.version>
         <jackson-databind.version>2.9.9.3</jackson-databind.version>
         <jackson.version>2.9.9</jackson.version>
+        <slf4j.version>1.7.25</slf4j.version>
 
         <!-- database Settings -->
         <spring-boot-mapper.version>2.1.5</spring-boot-mapper.version>
@@ -90,6 +91,11 @@
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok</artifactId>
                 <version>${lombok.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-simple</artifactId>
+                <version>${slf4j.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.fasterxml.jackson.core</groupId>
