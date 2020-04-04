@@ -17,6 +17,7 @@
 <inceptionYear>2020-Now</inceptionYear>
 
 <dependencies>
+    <!-- Project -->
     <dependency>
         <groupId>com.xmz.protfolio</groupId>
         <artifactId>protfolio-commons-domain</artifactId>
@@ -31,6 +32,18 @@
         <groupId>com.xmz.protfolio</groupId>
         <artifactId>protfolio-commons-utils</artifactId>
         <version>${project.parent.version}</version>
+    </dependency>
+
+    <!-- test -->
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-test</artifactId>
+        <scope>test</scope>
+    </dependency>
+    <dependency>
+        <groupId>junit</groupId>
+        <artifactId>junit</artifactId>
+        <scope>test</scope>
     </dependency>
 </dependencies>
 

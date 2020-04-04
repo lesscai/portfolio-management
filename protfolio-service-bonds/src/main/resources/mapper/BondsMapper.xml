@@ -1,18 +1,45 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.xmz.protolio.commons.domain.Bonds">
+<mapper namespace="com.xmz.protfolio.service.bonds.mapper.BondsMapper">
     <sql id="bondsColumns">
         a.id,
-        a.name,
-        b.id AS "teacher.id",
-        b.name AS "teacher.name"
+        a.bondsCode,
+        a.bondsName,
+        a.point
     </sql>
 
     <sql id="bondsJoins">
         LEFT JOIN teacher AS b ON a.teacher_id = b.id
     </sql>
 
+    <select id="selectAll" resultType="com.xmz.protolio.commons.domain.Bonds">
+        select
+        <include refid="bondsColumns" />
+         from
+         bonds
+    </select>
 
+    <select id="selectByCode" resultType="com.xmz.protolio.commons.domain.Bonds">
+        select
+        <include refid="bondsColumns" />
+        from
+        bonds
+        where
+        a.bondsCode = #{bondsCode}
+    </select>
 
+    <insert id="add" >
+        INSERT INTO bonds (
+        `bondsCode`,
+        `bondsName`,
+        `point`
+        )
+        VALUES
+        (
+        #{bondsCode},
+        #{bondsName},
+        #{point}
+        ) ;
+    </insert>
 
 </mapper>
